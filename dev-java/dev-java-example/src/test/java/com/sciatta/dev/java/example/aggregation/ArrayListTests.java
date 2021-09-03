@@ -71,7 +71,7 @@ public class ArrayListTests {
         
         assertSame(a, a1);
         assertSame(b, b1);
-    
+        
         // 拷贝一份新的指针
         Object[] newVector = vector.toArray();
         Object a2 = newVector[0];
@@ -82,9 +82,22 @@ public class ArrayListTests {
         // 改变新指针
         a2 = b2;
         assertSame(a2, b2);
-    
+        
         // 旧指针位置不变
         assertSame(a, a1);
         assertSame(b, b1);
+    }
+    
+    @Test
+    public void testType() {
+        Class<?> c = Integer.class;
+        assertTrue(Integer.class.isAssignableFrom(c));
+        
+        c = ArrayList.class;
+        
+        // isAssignableFrom 左边是父类，右边是子类
+        assertTrue(List.class.isAssignableFrom(c));
+        
+        assertFalse(ArrayList.class.isAssignableFrom(List.class));
     }
 }
