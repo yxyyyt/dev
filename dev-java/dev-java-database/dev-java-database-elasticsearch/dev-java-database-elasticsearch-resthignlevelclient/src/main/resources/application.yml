@@ -1,0 +1,9 @@
+elasticsearch:
+  clusterName: openmall-es
+  clusterNodes:
+    - 192.168.1.20:9200
+    - 192.168.1.21:9200
+    - 192.168.1.22:9200
+  index:
+    numberOfShards: 3
+    numberOfReplicas: 1

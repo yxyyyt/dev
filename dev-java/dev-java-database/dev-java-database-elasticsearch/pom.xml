@@ -3,32 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>dev-java-rpc</artifactId>
+        <artifactId>dev-java-database</artifactId>
         <groupId>com.sciatta.dev</groupId>
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>dev-java-rpc-dubbo</artifactId>
     <packaging>pom</packaging>
 
+    <artifactId>dev-java-database-elasticsearch</artifactId>
+
     <modules>
-        <module>dev-java-rpc-dubbo-api</module>
-        <module>dev-java-rpc-dubbo-api-provider</module>
+        <module>dev-java-database-elasticsearch-resthignlevelclient</module>
     </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
-    <dependencies>
-        <!-- dubbo -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>${dubbo.version}</version>
-        </dependency>
-    </dependencies>
 
 </project>
