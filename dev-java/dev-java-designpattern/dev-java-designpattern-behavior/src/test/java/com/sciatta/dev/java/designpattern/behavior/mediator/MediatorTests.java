@@ -1,6 +1,5 @@
 package com.sciatta.dev.java.designpattern.behavior.mediator;
 
-import com.sciatta.dev.java.designpattern.behavior.mediator.impl.ServiceMediator;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

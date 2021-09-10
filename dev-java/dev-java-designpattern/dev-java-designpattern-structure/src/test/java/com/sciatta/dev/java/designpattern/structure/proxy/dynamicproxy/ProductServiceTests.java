@@ -2,6 +2,8 @@ package com.sciatta.dev.java.designpattern.structure.proxy.dynamicproxy;
 
 import org.junit.Test;
 
+import java.io.Serializable;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -13,6 +15,14 @@ public class ProductServiceTests {
     @Test
     public void testProductService() {
         ProductService productService = ProductServiceProxy.create(new Class[]{ProductService.class});
+        
+        Product test = productService.getProductById("test");
+        assertEquals("test", test.getId());
+    }
+    
+    @Test
+    public void testNoneProductService() {
+        ProductService productService = ProductServiceProxy.create(new Class[]{Serializable.class});
         
         Product test = productService.getProductById("test");
         assertEquals("test", test.getId());

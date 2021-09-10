@@ -6,7 +6,7 @@ package com.sciatta.dev.java.designpattern.creative.singleton;
  * LazyWithDCL
  */
 public class LazyWithDCL {
-    private volatile static LazyWithDCL instance;
+    private volatile static LazyWithDCL instance;   // volatile 防止半初始化对象
     
     private LazyWithDCL() {
     }

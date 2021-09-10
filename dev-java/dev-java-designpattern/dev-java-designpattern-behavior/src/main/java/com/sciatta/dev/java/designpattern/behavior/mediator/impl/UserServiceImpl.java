@@ -1,6 +1,7 @@
 package com.sciatta.dev.java.designpattern.behavior.mediator.impl;
 
 import com.sciatta.dev.java.designpattern.behavior.mediator.Mediator;
+import com.sciatta.dev.java.designpattern.behavior.mediator.ServiceMediator;
 import com.sciatta.dev.java.designpattern.behavior.mediator.User;
 import com.sciatta.dev.java.designpattern.behavior.mediator.UserService;
 

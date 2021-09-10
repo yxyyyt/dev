@@ -1,6 +1,7 @@
 package com.sciatta.dev.java.designpattern.behavior.state.impl;
 
 import com.sciatta.dev.java.designpattern.behavior.state.DocState;
+import com.sciatta.dev.java.designpattern.behavior.state.impl.AutoVerify;
 
 /**
  * Created by yangxiaoyu on 2021/7/5<br>

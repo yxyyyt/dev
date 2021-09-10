@@ -18,8 +18,8 @@ public class InputCharacter {
         private LinkedList<String> undoList = new LinkedList<>();
         
         public void backUp(String str) {
-            undoList.addLast(currentInput.toString());
-            currentInput.append(str);
+            undoList.addLast(currentInput.toString());  // 历史各个节点的记录
+            currentInput.append(str);   // 当前记录
             
             redoList.clear();   // 只要正常键入后，清除原有的重做列表
         }

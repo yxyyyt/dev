@@ -1,4 +1,4 @@
-package com.sciatta.dev.java.designpattern.behavior.template.inharit;
+package com.sciatta.dev.java.designpattern.behavior.template.inherit;
 
 /**
  * Created by yangxiaoyu on 2021/7/4<br>

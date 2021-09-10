@@ -12,7 +12,7 @@ public class HdfsStore implements Store {
     private ConcurrentHashMap<String, String> cache = new ConcurrentHashMap<>();
     
     private HdfsStore() {
-    
+        // 类似mysql驱动，不允许直接实例化，必须通过StoreManager获得
     }
     
     static {

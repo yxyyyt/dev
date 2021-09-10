@@ -12,6 +12,13 @@ import java.util.Arrays;
  */
 public class ProductServiceProxy {
     public static ProductService create(Class<?>[] interfaces) {
+        // 保证一定实现ProductService接口
+        if (Arrays.stream(interfaces).noneMatch(ProductService.class::isAssignableFrom)) {
+            int size = interfaces.length;
+            interfaces = Arrays.copyOf(interfaces, size + 1);
+            interfaces[size] = ProductService.class;
+        }
+        
         return (ProductService) Proxy.newProxyInstance(ProductServiceProxy.class.getClassLoader(), interfaces,
                 new InvocationHandler() {
                     @Override

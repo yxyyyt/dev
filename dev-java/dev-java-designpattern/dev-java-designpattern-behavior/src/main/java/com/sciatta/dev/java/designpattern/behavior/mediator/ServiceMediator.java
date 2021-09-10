@@ -1,9 +1,12 @@
-package com.sciatta.dev.java.designpattern.behavior.mediator.impl;
+package com.sciatta.dev.java.designpattern.behavior.mediator;
 
 import com.sciatta.dev.java.designpattern.behavior.mediator.Mediator;
 import com.sciatta.dev.java.designpattern.behavior.mediator.PassportController;
 import com.sciatta.dev.java.designpattern.behavior.mediator.UserRepository;
 import com.sciatta.dev.java.designpattern.behavior.mediator.UserService;
+import com.sciatta.dev.java.designpattern.behavior.mediator.impl.PassportControllerImpl;
+import com.sciatta.dev.java.designpattern.behavior.mediator.impl.UserRepositoryImpl;
+import com.sciatta.dev.java.designpattern.behavior.mediator.impl.UserServiceImpl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -40,7 +43,7 @@ public class ServiceMediator implements Mediator {
             Object service = serviceClass.getConstructor(Mediator.class).newInstance(this);
             Method method = serviceClass.getMethod(methodName, paramClasses);
             
-            result = method.invoke(service, params);
+            result = method.invoke(service, params);     // 通过反射调用目标方法
             
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException |
                 NoSuchMethodException e) {

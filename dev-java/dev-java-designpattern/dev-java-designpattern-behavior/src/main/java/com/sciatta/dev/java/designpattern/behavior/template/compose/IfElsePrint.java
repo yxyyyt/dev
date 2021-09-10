@@ -21,7 +21,7 @@ public class IfElsePrint {
             return;
         }
         
-        if (listener.ifElse()) {
+        if (listener.ifElse()) {        // 通过回调方式
             System.out.println("if");
         } else {
             System.out.println("else");

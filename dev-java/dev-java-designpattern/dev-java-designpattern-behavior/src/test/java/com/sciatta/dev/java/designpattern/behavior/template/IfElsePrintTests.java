@@ -1,8 +1,8 @@
 package com.sciatta.dev.java.designpattern.behavior.template;
 
 import com.sciatta.dev.java.designpattern.behavior.template.compose.IfElsePrint;
-import com.sciatta.dev.java.designpattern.behavior.template.inharit.AbstractIfElsePrint;
-import com.sciatta.dev.java.designpattern.behavior.template.inharit.IfPrint;
+import com.sciatta.dev.java.designpattern.behavior.template.inherit.AbstractIfElsePrint;
+import com.sciatta.dev.java.designpattern.behavior.template.inherit.IfPrint;
 import org.junit.Test;
 
 /**
