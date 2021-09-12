@@ -6,6 +6,8 @@ package com.sciatta.dev.java.concurrency.threadlocal;
  * ThreadLocalDemo
  */
 public class ThreadLocalDemo {
+    // 传入的Supplier为给予ThreadLocal的value一个预初始化值
+    // 当首次从 ThreadLocal get 时，map没有创建，返回这个预初始化值，同时设置到map中
     private static ThreadLocal<Integer> seqNo = ThreadLocal.withInitial(() -> 0);
 
     public Integer getNextSeqNo() {

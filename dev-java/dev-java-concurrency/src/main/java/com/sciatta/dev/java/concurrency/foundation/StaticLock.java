@@ -7,16 +7,34 @@ package com.sciatta.dev.java.concurrency.foundation;
  * static synchronized 锁的是class对象，synchronized 锁的是对象，互不干扰
  */
 public class StaticLock {
-    public static synchronized void staticMethod() throws InterruptedException {
-        System.out.println("in static method " + Thread.currentThread().getName());
-        Thread.sleep(4000);
-        System.out.println("out static method " + Thread.currentThread().getName());
+//    public static synchronized void staticMethod() throws InterruptedException {
+//        System.out.println("in static method " + Thread.currentThread().getName());
+//        Thread.sleep(4000);
+//        System.out.println("out static method " + Thread.currentThread().getName());
+//    }
+//
+//    public synchronized void method() throws InterruptedException {
+//        System.out.println("in method " + Thread.currentThread().getName());
+//        Thread.sleep(2000);
+//        System.out.println("out method " + Thread.currentThread().getName());
+//    }
+    
+    // 同加到方法签名上一样
+    public static void staticMethod() throws InterruptedException {
+        synchronized (StaticLock.class) {
+            System.out.println("in static method " + Thread.currentThread().getName());
+            Thread.sleep(4000);
+            System.out.println("out static method " + Thread.currentThread().getName());
+        }
     }
     
-    public synchronized void method() throws InterruptedException {
-        System.out.println("in method " + Thread.currentThread().getName());
-        Thread.sleep(2000);
-        System.out.println("out method " + Thread.currentThread().getName());
+    // 同加到方法签名上一样
+    public void method() throws InterruptedException {
+        synchronized (this) {
+            System.out.println("in method " + Thread.currentThread().getName());
+            Thread.sleep(2000);
+            System.out.println("out method " + Thread.currentThread().getName());
+        }
     }
     
     public static void main(String[] args) throws InterruptedException {
